@@ -38,7 +38,7 @@
     - **Copyright infringement claims**
     - **Permanent removal from hosting platforms**
 - This project is shared for **portfolio purposes only**, not for commercial misuse or unethical replication.
-> ⚠️ This project is strictly protected. You are **not allowed** to reuse, copy, host, or modify any part of this code or design. Violations will lead to copyright actions.
+> ⚠️ This project is strictly protected. You are **not allowed** to reuse, copy, host, or modify any part of this code or design. Violations will lead to copyright actions.  
 > 🚫 **"Caesar Cipher Tool" is the original and protected work of Ayan Memon. Unauthorized use of the Name, Code, or Design is strictly prohibited.**
 
 ---
