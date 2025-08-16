@@ -458,6 +458,86 @@ input[type="number"] {
 }
 
 @media (max-width: 600px) {
+
+    /* Main Layout */
+    .header {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 22px;
+        flex-wrap: wrap;
+        /* Allows the title elements to wrap */
+        gap: 6px;
+        /* Reduced gap for smaller screens */
+    }
+
+    .card {
+        padding: 0;
+        /* Remove padding from card for full-width panels */
+    }
+
+    .content {
+        padding: 14px;
+        /* Reduced content padding */
+    }
+
+    /* Controls & Inputs */
+    .controls {
+        gap: 12px;
+    }
+
+    .toggle-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .slider-wrap {
+        grid-template-columns: 1fr 70px;
+        /* Adjusts width of number input */
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn {
+        width: 100%;
+        /* Makes buttons full-width */
+    }
+
+    .meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .meta .pill {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Results */
+    .result-card {
+        gap: 12px;
+    }
+
+    .result-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .badge {
+        padding: 8px 10px;
+    }
+
+    .mono-box {
+        min-height: 100px;
+        font-size: 14px;
+    }
+
+    /* Brute-force section */
     .brute-results li {
         flex-direction: column;
         align-items: flex-start;
