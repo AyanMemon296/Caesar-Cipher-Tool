@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Caesar Cipher Tool | Encrypt & Decrypt Messages Online</title>
+    <meta name="description" content="Use this free, online Caesar Cipher tool to easily encrypt and decrypt text. Simple, fast, and works right in your browser." />
+    <link rel="canonical" href="https://ayanmemon296.github.io/Caesar-Cipher-Tool/" />
+    
+    <link rel="icon" href="./favicon/user-secret.svg" type="image/svg+xml">
+    
+    <meta property="og:title" content="Caesar Cipher Tool" />
+    <meta property="og:description" content="An online tool to easily encrypt and decrypt messages using the Caesar cipher." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ayanmemon296.github.io/Caesar-Cipher-Tool/" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <canvas id="matrix"></canvas>
+    <div class="wrapper">
+        <div class="card">
+            <div class="header">
+                <h1 class="title">
+                    <span class="blip"></span> Caesar Cipher Tool —
+                    <span style="color: var(--neon)">Web App by Ayan Memon</span>
+                </h1>
+                <p class="subtitle">
+                    Encrypt with right shifts, decrypt with left shifts. Only A–Z and
+                    spaces are kept; everything else is removed and letters are
+                    uppercased automatically.
+                </p>
+            </div>
+
+            <div class="content main-content">
+                <div class="panel controls">
+                    <div class="mode-toggle" role="tablist" aria-label="Mode toggle">
+                        <button id="btnEncrypt" class="toggle-btn active" role="tab" aria-selected="true"
+                            type="button">🔒 Encrypt</button>
+                        <button id="btnDecrypt" class="toggle-btn" role="tab" aria-selected="false" type="button">🔓
+                            Decrypt</button>
+                    </div>
+
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Type your message here… e.g. Hello, World!"></textarea>
+                    </div>
+
+                    <div class="row">
+                        <div class="slider-wrap">
+                            <div>
+                                <label for="shift">Shift (<span id="shiftDir">Right</span>)</label>
+                                <input id="shift" type="range" min="0" max="25" value="3" />
+                            </div>
+                            <div>
+                                <label for="shiftNum">&nbsp;</label>
+                                <input id="shiftNum" type="number" min="0" max="25" value="3" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button id="runBtn" class="btn primary" type="button">Run</button>
+                        <button id="copyBtn" class="btn ghost" title="Copy result" type="button">Copy Result</button>
+                        <button id="clearBtn" class="btn danger" title="Clear all" type="button">Clear</button>
+                    </div>
+
+                    <div>
+                        <label>Cleaned Input <span class="muted">(A–Z & spaces only)</span></label>
+                        <div id="cleaned" class="mono-box muted"></div>
+                    </div>
+                    <div class="meta">
+                        <span class="pill" id="removedMeta">Removed: 0</span>
+                        <span class="pill" id="lengthMeta">Length: 0</span>
+                    </div>
+                </div>
+
+                <div class="panel result-card">
+                    <div class="result-header">
+                        <div class="badge" id="badge"><span id="badgeEmoji">🔒</span> <span id="badgeText">Encrypted
+                                Message</span></div>
+                        <div class="muted">Shift applied: <strong id="appliedShift">+3</strong></div>
+                    </div>
+                    <div class="mono-box" id="result"></div>
+                </div>
+            </div>
+
+            <div class="content">
+                <div id="bruteForceSection" class="panel">
+                    <h2 class="section-title">Brute Force Decrypt</h2>
+
+                    <label for="bruteInput" style="display:block;margin-bottom:8px;">Ciphertext</label>
+                    <textarea id="bruteInput" class="input"
+                        placeholder="Enter encrypted text (letters and spaces will be cleaned)"></textarea>
+
+                    <div style="margin-top:12px;">
+                        <button id="runBruteBtn" class="btn ghost" type="button">Run Brute Force Attack</button>
+                    </div>
+
+                    <div id="bruteResults" class="mono-box brute-results" style="margin-top:14px;"></div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="tip">💡 Tip: Decryption applies a <em>left</em> shift by the number you choose. Encryption
+                    applies a <em>right</em> shift.</div>
+
+                <div class="credits">
+                    <p>© 2025 Ayan Memon. All rights reserved.</p>
+                    <p>Project developed by <span class="neon-name">Ayan Memon</span></p>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.youtube.com/@ayanmemon2926" target="_blank" title="YouTube"><i
+                            class="fab fa-youtube"></i></a>
+                    <a href="https://github.com/AyanMemon296" target="_blank" title="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ayanmemon296/" target="_blank" title="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
